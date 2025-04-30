@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uyiro8kqKF0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DIPA\\OneDrive\\Desktop\\PROGRAMING\\C#\\To-Do-API-.NET\\To-Do-App\\To-Do-App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DIPA\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "C:\\Users\\DIPA\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
