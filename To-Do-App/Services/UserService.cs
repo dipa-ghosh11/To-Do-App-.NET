@@ -9,6 +9,9 @@ public class UserService
     private readonly IMongoCollection<User> _users;
 
     public UserService(ToDoDatabaseSettings settings){
-
+        
+        var client = new MongoClient(settings.ConnectionString);
+        var database = client.GetDatabase(settings.DatabaseName);
+        _users = database.GetCollection<User>(settings.UserCollectionName);
     }
 }
