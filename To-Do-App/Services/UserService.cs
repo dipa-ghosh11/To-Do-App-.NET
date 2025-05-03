@@ -15,5 +15,7 @@ public class UserService
         _users = database.GetCollection<User>(settings.UserCollectionName);
     }
 
-    public async Task<List<User>> GetAll() => await _users.Find(user = > true).ToListAsync();
+    public async Task<List<User>> GetAll() => await _users.Find(user => true).ToListAsync();
+
+    public async Task<User> GetById(String id) => await _users.Find(user => user.Id == id).FirstOrDefaultAsync();
 }
