@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GsESHRabZ1c=",
+  "dgSpecHash": "l0waHelbxEQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\DIPA\\OneDrive\\Desktop\\PROGRAMING\\C#\\To-Do-API-.NET\\To-Do-App\\To-Do-App.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DIPA\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\DIPA\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\DIPA\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
     "C:\\Users\\DIPA\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

@@ -1,6 +1,7 @@
 using System;
 using MongoDB.Driver;
 using To_Do_App.Models;
+using BCrypt.Net;
 
 namespace To_Do_App.Services;
 
@@ -18,4 +19,10 @@ public class UserService
     public async Task<List<User>> GetAll() => await _users.Find(user => true).ToListAsync();
 
     public async Task<User> GetById(String id) => await _users.Find(user => user.Id == id).FirstOrDefaultAsync();
+
+    public async Task Add(User user){
+        user.Password= BCrypt.Net.BCrypt.HashPassword(user.Password, BCrypt.Net.BCrypt.GenerateSalt(10));
+
+        await _users.InsertOneAsync(user);
+    }
 }
