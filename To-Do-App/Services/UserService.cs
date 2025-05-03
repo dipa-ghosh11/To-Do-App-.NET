@@ -14,4 +14,6 @@ public class UserService
         var database = client.GetDatabase(settings.DatabaseName);
         _users = database.GetCollection<User>(settings.UserCollectionName);
     }
+
+    public async Task<List<User>> GetAll() => await _users.Find(user = > true).ToListAsync();
 }
