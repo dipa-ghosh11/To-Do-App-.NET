@@ -21,7 +21,7 @@ public class UserService
     public async Task<User> GetById(String id) => await _users.Find(user => user.Id == id).FirstOrDefaultAsync();
 
     public async Task Add(User user){
-        user.Password= BCrypt.Net.BCrypt.HashPassword(user.Password, BCrypt.Net.BCrypt.GenerateSalt(10));
+        user.Password= BCrypt.Net.BCrypt.HashPassword(user.Password);
 
         await _users.InsertOneAsync(user);
     }
