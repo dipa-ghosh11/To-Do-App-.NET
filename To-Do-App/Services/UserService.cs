@@ -32,4 +32,7 @@ public class UserService
 
     public async Task Delete(String id)=>
         await _users.DeleteOneAsync(user => user.Id == id);
+
+    public async Task<User> GetByEmail(string email) =>
+        await _users.Find(user=> user.Email== email).FirstOrDefaultAsync();
 }
