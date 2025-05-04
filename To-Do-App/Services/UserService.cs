@@ -28,4 +28,8 @@ public class UserService
 
     public async Task Update(string id, User updateUser) =>
         await _users.ReplaceOneAsync(user => user.Id == id, updateUser);
+
+
+    public async Task Delete(String id)=>
+        await _users.DeleteOneAsync(user => user.Id == id);
 }
