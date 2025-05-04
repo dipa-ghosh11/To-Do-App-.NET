@@ -35,4 +35,7 @@ public class UserService
 
     public async Task<User> GetByEmail(string email) =>
         await _users.Find(user=> user.Email== email).FirstOrDefaultAsync();
+
+    public bool CheckPassword(User user,  string password)=>
+        BCrypt.Net.BCrypt.Verify(password, user.Password);
 }
