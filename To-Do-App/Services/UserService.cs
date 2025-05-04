@@ -25,4 +25,7 @@ public class UserService
 
         await _users.InsertOneAsync(user);
     }
+
+    public async Task Update(string id, User updateUser) =>
+        await _users.ReplaceOneAsync(user => user.Id == id, updateUser);
 }

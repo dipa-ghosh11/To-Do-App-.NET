@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace To_Do_App.Models;
 
-public class Task
+public class TaskItem
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
