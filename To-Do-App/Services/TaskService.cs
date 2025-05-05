@@ -16,6 +16,9 @@ public class TaskService
 
     public async Task<List<TaskItem>> GetAll() =>
         await _tasks.Find(task => true).ToListAsync();
+
+    public async Task<TaskItem> GetById(string id) =>
+        await _tasks.Find(task => task.Id == id).FirstOrDefaultAsync();
 }
 
 }
