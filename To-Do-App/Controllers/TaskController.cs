@@ -17,7 +17,13 @@ namespace To_Do_App.Controllers{
             _taskService = taskService;
         }
 
-        
+        // Get : api/task
+        [HttpGet]
+
+        public async Task<ActionResult<List<TaskItem>>> GetAll(){
+            var tasks = await _taskService.GetAll();
+            return Ok(tasks);
+        }
     }
 
 }
