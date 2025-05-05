@@ -13,6 +13,9 @@ public class TaskService
             var database = client.GetDatabase(settings.DatabaseName);
             _tasks = database.GetCollection<TaskItem>(settings.TaskCollectionName);
         }
+
+    public async Task<List<TaskItem>> GetAll() =>
+        await _tasks.Find(task => true).ToListAsync();
 }
 
 }
