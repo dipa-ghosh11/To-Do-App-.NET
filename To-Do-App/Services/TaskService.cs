@@ -19,6 +19,12 @@ public class TaskService
 
     public async Task<TaskItem> GetById(string id) =>
         await _tasks.Find(task => task.Id == id).FirstOrDefaultAsync();
+
+    public async Task Add(TaskItem task) =>
+        await _tasks.InsertOneAsync(task);
+
+    public async Task Update(string id, TaskItem updateTask)=>
+        await _tasks.ReplaceOneAsync(task => task.Id == id, updateTask);
 }
 
 }
