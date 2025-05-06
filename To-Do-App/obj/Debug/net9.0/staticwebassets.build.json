@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "wixlVVtmsuAH6OAQ0tCknDaftddEIwVfNuRz4zYC698=",
+  "Source": "To-Do-App",
+  "BasePath": "_content/To-Do-App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
