@@ -24,6 +24,18 @@ namespace To_Do_App.Controllers{
             var tasks = await _taskService.GetAll();
             return Ok(tasks);
         }
+
+        // GET: api/task/{id}
+        [HttpGet("{id:length(24)}",Name ="GetTask")]
+        public async Task<ActionResult<TaskItem>> GetById(string id){
+            var task= await _taskService.GetById(id);
+
+            if(task==null){
+                return NotFound();
+            }
+
+            return Ok(task);
+        }
     }
 
 }
