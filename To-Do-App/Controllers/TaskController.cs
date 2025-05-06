@@ -60,6 +60,20 @@ namespace To_Do_App.Controllers{
 
             return NoContent();
         }
+
+
+        // DELETE: api/task/{id}
+        [HttpDelete("{id:length(24)}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var task = await _taskService.GetById(id);
+
+            if (task == null)
+                return NotFound();
+
+            await _taskService.Delete(id);
+            return NoContent();
+        }
     }
 
 }
