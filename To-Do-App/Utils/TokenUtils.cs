@@ -10,9 +10,11 @@ namespace To_Do_App.Utils;
 
 public class TokenUtil
 {
-     var claims= new[]
-     {
-        new Claim(JwtRegisteredClaimNames.Sub, config["Jwt:Subject"]),
-
-     }
+    public static string GenerateJwtToken(User user, IConfiguration config){
+      var claims=new[]
+      {
+         new Claim(JwtRegisteredClaimNames.Sub, config["Jwt:Subject"]),
+         
+      } 
+    }
 }
