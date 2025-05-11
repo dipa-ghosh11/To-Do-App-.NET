@@ -14,7 +14,11 @@ public class TokenUtil
       var claims=new[]
       {
          new Claim(JwtRegisteredClaimNames.Sub, config["Jwt:Subject"]),
-         
+         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+         new Claim("_id", user.Id.ToString()),
+         new Claim("email", user.Email),
+         new Claim("Fullname", user.Fullname),
+
       } 
     }
 }
