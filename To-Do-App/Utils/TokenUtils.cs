@@ -19,6 +19,9 @@ public class TokenUtil
          new Claim("email", user.Email),
          new Claim("Fullname", user.Fullname),
 
-      } 
-    }
+      };
+
+    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Secret"]));
+    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+  }
 }
