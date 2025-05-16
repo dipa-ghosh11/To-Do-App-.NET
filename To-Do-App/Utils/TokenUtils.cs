@@ -23,5 +23,13 @@ public class TokenUtil
 
     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Secret"]));
     var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+     var token = new JwtSecurityToken(
+            issuer: config["Jwt:Issuer"],
+            audience: config["Jwt:Audience"],
+            claims: claims,
+            expires: DateTime.UtcNow.AddHours(1),
+            signingCredentials: creds
+        );
   }
 }
