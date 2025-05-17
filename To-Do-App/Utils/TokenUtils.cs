@@ -32,4 +32,6 @@ public class TokenUtil
             signingCredentials: creds
         );
   }
+
+    return new JwtSecurityTokenHandler().WriteToken(token);
 }
